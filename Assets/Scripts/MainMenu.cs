@@ -52,7 +52,6 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         //Panels
-        mainMenuCanvas.SetActive(true);
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
     }
@@ -76,6 +75,9 @@ public class MainMenu : MonoBehaviour
         settingsPanel.SetActive(true);
         creditsPanel.SetActive(false);
         mainMenuCanvas.SetActive(false);
+
+        sliderPlayer1Speed.value = player1.moveSpeed;
+        sliderPlayer2Speed.value = player2.moveSpeed;
     }
     private void OnCreditsClicked()
     {

@@ -70,8 +70,6 @@ public class PauseMenu : MonoBehaviour
     }
     private void OnContinueClicked()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
             isPause = !isPause;
             pausePanel.SetActive(isPause);
             if (isPause)
@@ -82,7 +80,6 @@ public class PauseMenu : MonoBehaviour
             {
                 Time.timeScale = 1f;
             }
-        }
     }
     private void OnSettingsClicked()
     {
