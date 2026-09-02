@@ -1,45 +1,40 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System;
-using Unity.VisualScripting;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     [Header("Buttons")]
-    [SerializeField] private Button btnPlay;
+    [SerializeField] private Button btnContinue;
     [SerializeField] private Button btnSettings;
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
 
     [Header("Panels")]
 
-    [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private GameObject pausePanel;
 
     [Header("Sliders")]
-
     [SerializeField] private Slider sliderPlayer1Speed;
     [SerializeField] private Slider sliderPlayer2Speed;
 
     [Header("Players")]
-
     [SerializeField] private Movement player1;
     [SerializeField] private Movement player2;
 
-    [Header("TextPlayers")]
-    [SerializeField] private TMP_Text textSpeedPlayer1;
-    [SerializeField] private TMP_Text textSpeedPlayer2;
-
-
-
+    [Header("Players")]
+    [SerializeField] private TMP_Text TextPlayer1;
+    [SerializeField] private TMP_Text TextPlayer2;
+   
+    private bool isPause = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
+    private void Awake ()
     {
-       // Buttons
-        btnPlay.onClick.AddListener(OnPlayClicked);
+        btnContinue.onClick.AddListener(OnContinueClicked);
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
@@ -51,14 +46,21 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        //Panels
-        mainMenuCanvas.SetActive(true);
-        settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        settingsPanel.SetActive(false);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnContinueClicked();
+        }
+    }
+
     private void OnDestroy()
     {
-        btnPlay.onClick.RemoveListener(OnPlayClicked);
+        btnContinue.onClick.RemoveListener(OnContinueClicked);
         btnSettings.onClick.RemoveListener(OnSettingsClicked);
         btnCredits.onClick.RemoveListener(OnCreditsClicked);
         btnExit.onClick.RemoveListener(OnExitClicked);
@@ -66,38 +68,44 @@ public class MainMenu : MonoBehaviour
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
     }
-    private void OnPlayClicked()
+    private void OnContinueClicked()
     {
-        mainMenuCanvas.SetActive(false);
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            isPause = !isPause;
+            pausePanel.SetActive(isPause);
+            if (isPause)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+        }
     }
-
     private void OnSettingsClicked()
     {
+        sliderPlayer1Speed.value = player1.moveSpeed;
+        sliderPlayer2Speed.value = player2.moveSpeed;
         settingsPanel.SetActive(true);
-        creditsPanel.SetActive(false);
-        mainMenuCanvas.SetActive(false);
     }
     private void OnCreditsClicked()
     {
         creditsPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        mainMenuCanvas.SetActive(false);
-
-    }
-
-    private void OnPlayer1SpeedChanged (float value) // DENEMOS PONER float value porque asi le estamos diciendo que cuando sea llamada esta funcion va a recibir un float value
-    {
-        player1.moveSpeed = value;
-        textSpeedPlayer1.text = value.ToString("F1"); // El F1 nos permite que se pongan valores sin decimal
-    }
-    private void OnPlayer2SpeedChanged(float value)
-    {
-        player2.moveSpeed = value;
-        textSpeedPlayer2.text = value.ToString("F1"); // El F1 nos permite que se pongan valores sin decimal
     }
     private void OnExitClicked()
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }
-
+    private void OnPlayer1SpeedChanged(float value)
+    {
+        player1.moveSpeed = value;
+        TextPlayer1.text = value.ToString("F1");
+    }
+    private void OnPlayer2SpeedChanged(float value)
+    {
+        player2.moveSpeed = value;
+        TextPlayer2.text = value.ToString("F1");
+    }
 }
