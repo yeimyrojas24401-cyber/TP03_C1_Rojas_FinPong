@@ -6,14 +6,13 @@ public class Movement : MonoBehaviour
     // The purpose of this script is to handle the movement of the player character in the game. It will allow the player to move left, right, up, and down. 
 
     [Header("Movement Settings")]
-
     [SerializeField] private KeyCode moveUp = KeyCode.W;
     [SerializeField] private KeyCode moveRight = KeyCode.D;
     [SerializeField] private KeyCode moveDown = KeyCode.S;
     [SerializeField] private KeyCode moveLeft = KeyCode.A;
 
     [Header("Speed Settings")]
-    [SerializeField] private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
 
     [Header("Rotation Settings")]
     [SerializeField] private float rotationAngle = 10f;

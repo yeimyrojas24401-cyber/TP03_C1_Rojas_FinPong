@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using Unity.VisualScripting;
 
 public class MainMenu : MonoBehaviour
 {
@@ -18,6 +19,19 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
 
+    [Header("Sliders")]
+
+    [SerializeField] private GameObject sliderPlayer1Speed;
+    [SerializeField] private GameObject sliderPlayer2Speed;
+
+    [Header("Players")]
+
+    [SerializeField] private Movement player1;
+    [SerializeField] private Movement player2;
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -26,6 +40,8 @@ public class MainMenu : MonoBehaviour
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+
+        sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged);
     }
 
     private void Start()
@@ -64,6 +80,11 @@ public class MainMenu : MonoBehaviour
         settingsPanel.SetActive(false);
         mainMenuCanvas.SetActive(false);
 
+    }
+
+    private void OnPlayer1SpeedChanged ()
+    {
+        player1.moveSpeed = value;
     }
     private void OnExitClicked()
     {
