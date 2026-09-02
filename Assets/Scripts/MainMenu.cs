@@ -67,7 +67,7 @@ public class MainMenu : MonoBehaviour
     }
     private void OnExitClicked()
     {
-        throw new NotImplementedException();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
 }
