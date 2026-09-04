@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ColorC : MonoBehaviour
+public class ColorChanger : MonoBehaviour
 {
     [Header("Color Settings")]
     [SerializeField] private KeyCode colorChange = KeyCode.R;
