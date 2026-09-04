@@ -21,12 +21,15 @@ public class Rotator : MonoBehaviour
         //Rotation 
         if (Input.GetKeyDown(rotationRight))
         {
-            rb.AddTorque(rotationAngle, ForceMode2D.Impulse);
+            //rottacion fija 
+            rb.rotation += -15;
+            //rotacion continua
+           // rb.AddTorque(-rotationAngle, ForceMode2D.Impulse);
         }
 
         if (Input.GetKeyDown(rotationLeft))
         {
-            rb.AddTorque(-rotationAngle, ForceMode2D.Impulse);
+            rb.AddTorque(rotationAngle, ForceMode2D.Impulse);
         }
     }
 }

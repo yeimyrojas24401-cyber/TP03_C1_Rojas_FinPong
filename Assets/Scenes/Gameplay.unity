@@ -433,6 +433,7 @@ MonoBehaviour:
   moveRight: 262
   moveDown: 261
   moveLeft: 260
+  isContinuous: 1
   moveSpeed: 1
 --- !u!1 &169559760
 GameObject:
@@ -461,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 169559760}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.79, y: 0.06, z: 0}
+  m_LocalPosition: {x: 9.8, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -704,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 206322488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.76, y: 0.06, z: 0}
+  m_LocalPosition: {x: -8.8, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1176,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &654606214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,7 +1677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1048692507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,10 +2253,10 @@ GameObject:
   - component: {fileID: 1600476477}
   - component: {fileID: 1600476476}
   - component: {fileID: 1600476481}
-  - component: {fileID: 1600476480}
   - component: {fileID: 1600476479}
+  - component: {fileID: 1600476480}
   m_Layer: 0
-  m_Name: seaLion
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2273,10 +2274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4898e7f9df6fe4e46998e6d4cf3fae22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  moveUp: 273
-  moveRight: 275
-  moveDown: 274
-  moveLeft: 276
+  moveUp: 119
+  moveRight: 100
+  moveDown: 115
+  moveLeft: 97
+  isContinuous: 1
   moveSpeed: 100
 --- !u!212 &1600476477
 SpriteRenderer:
@@ -2327,7 +2329,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2556760793263035008, guid: 93be7b0cf9e5b16468cb099fd50840e6, type: 3}
+  m_Sprite: {fileID: 6126932160397797606, guid: 4302929ec5e905c4dbe9aa0dc73392f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2346,7 +2348,7 @@ Transform:
   m_GameObject: {fileID: 1600476475}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.15, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2417,13 +2419,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.87, y: 1.99}
+    oldSize: {x: 0.82, y: 2.1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.87, y: 1.99}
+  m_Size: {x: 0.82, y: 1.72}
   m_EdgeRadius: 0
 --- !u!114 &1600476481
 MonoBehaviour:
@@ -2913,7 +2915,7 @@ GameObject:
   - component: {fileID: 2091655700}
   - component: {fileID: 2091655701}
   m_Layer: 0
-  m_Name: trashMonster
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,10 +2933,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4898e7f9df6fe4e46998e6d4cf3fae22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  moveUp: 119
-  moveRight: 100
-  moveDown: 115
-  moveLeft: 97
+  moveUp: 273
+  moveRight: 275
+  moveDown: 274
+  moveLeft: 276
+  isContinuous: 1
   moveSpeed: 100
 --- !u!212 &2091655698
 SpriteRenderer:
@@ -3004,7 +3007,7 @@ Transform:
   m_GameObject: {fileID: 2091655696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.09, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3587,8 +3590,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 363952323}
-  - {fileID: 2091655699}
   - {fileID: 1600476478}
+  - {fileID: 2091655699}
   - {fileID: 654606217}
   - {fileID: 1048692511}
   - {fileID: 2014097829}
