@@ -1177,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &654606214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,7 +1677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1048692507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   moveDown: 115
   moveLeft: 97
   isContinuous: 1
-  moveSpeed: 100
+  moveSpeed: 1000
 --- !u!212 &1600476477
 SpriteRenderer:
   serializedVersion: 2
@@ -2938,7 +2938,7 @@ MonoBehaviour:
   moveDown: 274
   moveLeft: 276
   isContinuous: 1
-  moveSpeed: 100
+  moveSpeed: 1000
 --- !u!212 &2091655698
 SpriteRenderer:
   serializedVersion: 2
