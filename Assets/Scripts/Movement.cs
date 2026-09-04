@@ -13,44 +13,12 @@ public class Movement : MonoBehaviour
 
     [Header("Speed Settings")]
     public float moveSpeed = 1f;
-
-    [Header("Rotation Settings")]
-    [SerializeField] private float rotationAngle = 10f;
-    [SerializeField] private KeyCode rotationRight = KeyCode.E;
-    [SerializeField] private KeyCode rotationLeft = KeyCode.Q;
-
-    [Header("Color Settings")]
-    [SerializeField] private KeyCode colorChange = KeyCode.R;
-    private SpriteRenderer spriteRenderer; // esta es variable que queremos que guarde una referencia de un componente de un sprite
-
-
     private Rigidbody2D rb;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); // aqui desde que despierta mando a llamar a los componentes que existen dentro de mi sprite
+       // aqui desde que despierta mando a llamar a los componentes que existen dentro de mi sprite
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        //Rotation 
-        if (Input.GetKeyDown(rotationRight))
-        {
-            transform.Rotate(Vector3.forward * -rotationAngle);
-        }
-
-        if (Input.GetKeyDown(rotationLeft))
-        {
-            transform.Rotate(Vector3.forward * rotationAngle);
-        }
-        if (Input.GetKeyUp(colorChange))
-        {
-            spriteRenderer.color = new Color (Random.value, Random.value, Random.value);
-        }
     }
     private void FixedUpdate() // fisicas
     {
