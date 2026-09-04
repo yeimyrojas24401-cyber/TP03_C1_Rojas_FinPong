@@ -23,33 +23,20 @@ public class Movement : MonoBehaviour
     [SerializeField] private KeyCode colorChange = KeyCode.R;
     private SpriteRenderer spriteRenderer; // esta es variable que queremos que guarde una referencia de un componente de un sprite
 
+
+    private Rigidbody2D rb;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // aqui desde que despierta mando a llamar a los componentes que existen dentro de mi sprite
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        //Movement
-        if (Input.GetKey(moveUp))
-        {
-            transform.position += new Vector3(0, moveSpeed * Time.deltaTime);
-
-        }
-        if (Input.GetKey(moveRight))
-        {
-            transform.position += new Vector3(moveSpeed * Time.deltaTime, 0);
-        }
-        if (Input.GetKey(moveDown))
-        {
-            transform.position += new Vector3(0, -moveSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(moveLeft))
-        {
-            transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0);
-        }
         //Rotation 
         if (Input.GetKeyDown(rotationRight))
         {
@@ -63,6 +50,26 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyUp(colorChange))
         {
             spriteRenderer.color = new Color (Random.value, Random.value, Random.value);
+        }
+    }
+    private void FixedUpdate() // fisicas
+    {
+        // Movimiento
+        if (Input.GetKey (moveUp))
+        {
+            rb.AddForce(new Vector3(0, moveSpeed * Time.fixedDeltaTime));
+        }
+        if (Input.GetKey(moveRight))
+        {
+            rb.AddForce(new Vector3(moveSpeed * Time.fixedDeltaTime, 0));
+        }
+        if (Input.GetKey(moveDown))
+        {
+            rb.AddForce (new Vector3(0, -moveSpeed * Time.fixedDeltaTime));
+        }
+        if (Input.GetKey(moveLeft))
+        {
+            rb.AddForce (new Vector3(-moveSpeed * Time.fixedDeltaTime, 0));
         }
     }
 }
