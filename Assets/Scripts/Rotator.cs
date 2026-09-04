@@ -7,10 +7,12 @@ public class Rotator : MonoBehaviour
     [SerializeField] private KeyCode rotationRight = KeyCode.E;
     [SerializeField] private KeyCode rotationLeft = KeyCode.Q;
 
+    private Rigidbody2D rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -19,12 +21,12 @@ public class Rotator : MonoBehaviour
         //Rotation 
         if (Input.GetKeyDown(rotationRight))
         {
-            transform.Rotate(Vector3.forward * -rotationAngle);
+            rb.AddTorque(rotationAngle, ForceMode2D.Impulse);
         }
 
         if (Input.GetKeyDown(rotationLeft))
         {
-            transform.Rotate(Vector3.forward * rotationAngle);
+            rb.AddTorque(-rotationAngle, ForceMode2D.Impulse);
         }
     }
 }
