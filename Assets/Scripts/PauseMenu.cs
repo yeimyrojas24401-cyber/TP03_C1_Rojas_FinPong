@@ -12,7 +12,7 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private Button btnExit;
 
 
-    [Header("SizePlayersButtons")]
+    [Header("Size Players Buttons")]
     [SerializeField] private Button btnSmallPlayer1;
     [SerializeField] private Button btnMediumPlayer1;
     [SerializeField] private Button btnLargePlayer1;
@@ -20,6 +20,16 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private Button btnSmallPlayer2;
     [SerializeField] private Button btnMediumPlayer2;
     [SerializeField] private Button btnLargePlayer2;
+
+    [Header("Color Changer Players Buttons")]
+    [SerializeField] private Button btnNullPlayer1;
+    [SerializeField] private Button btnRedPlayer1;
+    [SerializeField] private Button btnBluePlayer1;
+
+    [SerializeField] private Button btnNullPlayer2;
+    [SerializeField] private Button btnRedPlayer2;
+    [SerializeField] private Button btnBluePlayer2;
+
 
     [Header("Panels")]
     [SerializeField] private GameObject creditsPanel;
@@ -72,9 +82,21 @@ public class pauseMenu : MonoBehaviour
         btnMediumPlayer2.onClick.AddListener(OnButtonMediumPlayer2Clicked);
         btnLargePlayer2.onClick.AddListener(OnButtonLargePlayer2Clicked);
 
+        //Color Changer Buttons Player 1
+        btnNullPlayer1.onClick.AddListener(OnNullColorClickedPlayer1);
+        btnRedPlayer1.onClick.AddListener(OnRedColorClickedPlayer1);
+        btnBluePlayer1.onClick.AddListener(OnBlueColorClickedPlayer1);
+
+        //Color Changer Buttons Player 2
+        btnNullPlayer2.onClick.AddListener(OnNullColorClickedPlayer2);
+        btnRedPlayer2.onClick.AddListener(OnRedColorClickedPlayer2);
+        btnBluePlayer2.onClick.AddListener(OnBlueColorClickedPlayer2);
+
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
+
+
 
 
     private void Start()
@@ -205,6 +227,39 @@ public class pauseMenu : MonoBehaviour
     {
         GameManager.Instance.player2Sprite = player2Large;
         player2Visual.UpdateSprite();
+    }
+
+    // INSTRUCCIONES PARA EL COLOR CHANGER PLAYER 1
+    private void OnNullColorClickedPlayer1()
+    {
+        GameManager.Instance.player1Color = Color.white;
+        player1Visual.UpdateColor();
+    }
+    private void OnRedColorClickedPlayer1()
+    {
+        GameManager.Instance.player1Color = Color.red;
+        player1Visual.UpdateColor();
+    }
+    private void OnBlueColorClickedPlayer1()
+    {
+        GameManager.Instance.player1Color = Color.blue;
+        player1Visual.UpdateColor();
+    }
+    // INSTRUCCIONES PARA EL COLOR CHANGER PLAYER 2
+    private void OnNullColorClickedPlayer2()
+    {
+        GameManager.Instance.player2Color = Color.white;
+        player2Visual.UpdateColor();
+    }
+    private void OnRedColorClickedPlayer2()
+    {
+        GameManager.Instance.player2Color = Color.red;
+        player2Visual.UpdateColor();
+    }
+    private void OnBlueColorClickedPlayer2()
+    {
+        GameManager.Instance.player2Color = Color.blue;
+        player2Visual.UpdateColor();
     }
 
 }
