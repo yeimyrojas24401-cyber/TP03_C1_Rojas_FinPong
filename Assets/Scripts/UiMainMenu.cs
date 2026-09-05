@@ -109,30 +109,18 @@ public class UiMainMenu : MonoBehaviour
     }
     private void OnLargePlayer1Clicked()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player1Sprite = player1Large;
     }
 
     private void OnMediumPlayer1Clicked()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player1Sprite = player1Medium;
     }
 
     private void OnSmallPlayer1Clicked()
     {
-        throw new NotImplementedException();
-    }
-
-    public void SelectSmall()
-    {
         GameManager.Instance.player1Sprite = player1Small;
     }
-
-    public void SelectMedium()
-    {
-        GameManager.Instance.player1Sprite = player1Medium;
-    }
-
-    
     private void OnExitClicked()
     {
         UnityEditor.EditorApplication.isPlaying = false;
