@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4810886531003798500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66,9 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3560698593848636649, guid: 5d24e2d6456704645b44dc291a855298, type: 3}
+  m_Sprite: {fileID: 2408792028469507190, guid: a59b152e5847e6c48bb4e33fded79254, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -84,6 +84,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4810886531003798500}
     m_Modifications:
+    - target: {fileID: 1023782697714675260, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.43137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023782697714675260, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023782697714675260, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.7529412
+      objectReference: {fileID: 0}
     - target: {fileID: 1140574569278693354, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: currentPanel
       value: 

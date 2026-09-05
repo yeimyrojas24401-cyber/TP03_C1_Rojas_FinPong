@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
     {
        // aqui desde que despierta mando a llamar a los componentes que existen dentro de mi sprite
         rb = GetComponent<Rigidbody2D>();
+        moveSpeed = GameManager.Instance.player1Speed; //carga la velocidad instanciada desde el menu y la pone en el moveSpeed en esta nueva escena
     }
     private void FixedUpdate() // fisicas
     {

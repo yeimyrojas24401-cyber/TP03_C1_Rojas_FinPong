@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using TMPro;
 // si hay algo gris no lo necesito
 using UnityEngine;
@@ -24,10 +25,6 @@ public class UiMainMenu : MonoBehaviour
     [Header("Slider")]
     [SerializeField] private Slider sliderPlayer1Speed;
     [SerializeField] private Slider sliderPlayer2Speed;
-
-    //[Header("Players")]
-    //[SerializeField] private Movement player1;
-    //[SerializeField] private Movement player2;
 
     [Header("SpeedPlayersTMP")]
     [SerializeField] private TMP_Text textSpeedPlayer1;
@@ -81,8 +78,6 @@ public class UiMainMenu : MonoBehaviour
 
     private void OnSettingsClicked()
     {
-        //sliderPlayer1Speed.value = player1.moveSpeed;
-        //sliderPlayer2Speed.value = player2.moveSpeed;
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(true);
         creditsPanel.SetActive(false);
@@ -97,15 +92,36 @@ public class UiMainMenu : MonoBehaviour
 
     private void OnPlayer1SpeedChanged(float value) // esta funcion va a recibir un numero decimal cuando sea llamada
     {
-        //player1.moveSpeed = value;
-        //// float percentage = value * 25f; //esto nos permite hacer una equivalencia para que la velocidad se ponga en %
-        //textSpeedPlayer1.text = value.ToString("F1");
+        switch (value)
+        {
+            case 1:
+                GameManager.Instance.player1Speed = 500; //Guardar el valor 500 como player1Speed
+                break;
+            case 2:
+                GameManager.Instance.player1Speed = 1000;  //Guardar el valor 500 como player1Speed
+                break;
+            case 3:
+                GameManager.Instance.player1Speed = 2000; //Guardar el valor 500 como player1Speed
+                break;
+        }
+        textSpeedPlayer1.text = GameManager.Instance.player1Speed.ToString();
     }
 
     private void OnPlayer2SpeedChanged(float value)
     {
-        //player2.moveSpeed = value;
-        //textSpeedPlayer2.text = value.ToString("F1");
+        switch (value)
+        {
+            case 1:
+                GameManager.Instance.player2Speed = 500;
+                break;
+            case 2:
+                GameManager.Instance.player2Speed = 1000;
+                break;
+            case 3:
+                GameManager.Instance.player2Speed = 2000;
+                break;
+        }
+        textSpeedPlayer2.text = GameManager.Instance.player2Speed.ToString();
     }
     private void OnLargePlayer1Clicked()
     {

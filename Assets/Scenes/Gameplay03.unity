@@ -280,18 +280,6 @@ PrefabInstance:
       propertyPath: backPanel
       value: 
       objectReference: {fileID: 634267368}
-    - target: {fileID: 3129616085266970591, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.43137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129616085266970591, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.6431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129616085266970591, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.7529412
-      objectReference: {fileID: 0}
     - target: {fileID: 4810886531003798500, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -375,14 +363,6 @@ PrefabInstance:
     - target: {fileID: 5211296985030773996, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
       propertyPath: m_Name
       value: CreditsPausePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211296985030773996, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100044135204152017, guid: 7c485d4d0a4b5ea4e9240927f27eabc0, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -840,7 +820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8511344219628573114, guid: 977ed4c5a22f29c4e8c6d2007f00ef01, type: 3}
+  m_Sprite: {fileID: 4651566453692222100, guid: 7afdfcdb7af6d114f8919eb95e24425c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -877,7 +857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &654606214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,10 +1436,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsPausePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1872444831989218750, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872444831989218750, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2359226901545924282, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: backPanel
       value: 
       objectReference: {fileID: 634267368}
+    - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813970104668154394, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813970104668154394, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8350619434342633455, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
