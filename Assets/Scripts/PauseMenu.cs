@@ -152,7 +152,7 @@ public class pauseMenu : MonoBehaviour
                 break;
         }
         player2.moveSpeedPlayer2 = GameManager.Instance.player2Speed;
-        textSpeedPlayer1.text = GameManager.Instance.player2Speed.ToString();
+        textSpeedPlayer2.text = GameManager.Instance.player2Speed.ToString();
     }
 
     private void OnPlayer1SpeedChanged(float value)
