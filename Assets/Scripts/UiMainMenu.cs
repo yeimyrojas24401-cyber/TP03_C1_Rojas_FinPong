@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 // si hay algo gris no lo necesito
 using UnityEngine;
@@ -12,13 +13,22 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
 
-    [Header("SizePlayersButtons")]
+    [Header("Size Players Buttons")]
     [SerializeField] private Button btnSmallPlayer1;
     [SerializeField] private Button btnMediumPlayer1;
     [SerializeField] private Button btnLargePlayer1;
     [SerializeField] private Button btnSmallPlayer2;
     [SerializeField] private Button btnMediumPlayer2;
     [SerializeField] private Button btnLargePlayer2;
+
+    [Header("Color Players Buttons")]
+    [SerializeField] private Button btnNullColorPlayer1;
+    [SerializeField] private Button btnRedColorPlayer1;
+    [SerializeField] private Button btnBlueColorPlayer1;
+
+    [SerializeField] private Button btnNullColorPlayer2;
+    [SerializeField] private Button btnRedColorPlayer2;
+    [SerializeField] private Button btnBlueColorPlayer2;
 
     [Header("Panels")]
     [SerializeField] private GameObject mainMenuCanvas;
@@ -49,20 +59,36 @@ public class UiMainMenu : MonoBehaviour
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
         
-        //Buttons player 1
+        //Buttons Size player 1
         btnSmallPlayer1.onClick.AddListener(OnSmallPlayer1Clicked);
         btnMediumPlayer1.onClick.AddListener(OnMediumPlayer1Clicked);
         btnLargePlayer1.onClick.AddListener(OnLargePlayer1Clicked);
 
-        //Buttons player 2
+        //Buttons Size player 2
         btnSmallPlayer2.onClick.AddListener(OnSmallPlayer2Clicked);
         btnMediumPlayer2.onClick.AddListener(OnMediumPlayer2Clicked);
         btnLargePlayer2.onClick.AddListener(OnLargePlayer2Clicked);
+
+        //Color Changer player 1
+        btnNullColorPlayer1.onClick.AddListener(OnNullColorClikedPlayer1);
+        btnRedColorPlayer1.onClick.AddListener(OnRedColorClikedPlayer1);
+        btnBlueColorPlayer1.onClick.AddListener(OnBlueColorClikedPlayer1);
+
+        //Color Changer player 2
+        btnNullColorPlayer2.onClick.AddListener(OnNullColorClickedPlayer2);
+        btnRedColorPlayer2.onClick.AddListener(OnRedColorClickedPlayer2);
+        btnBlueColorPlayer2.onClick.AddListener(OnBlueColorClickedPlayer2);
 
 
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
+
+
+
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -109,7 +135,7 @@ public class UiMainMenu : MonoBehaviour
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(false);
     }
-
+    // Speed Changed Player 1 Slider
     private void OnPlayer1SpeedChanged(float value) // esta funcion va a recibir un numero decimal cuando sea llamada
     {
         switch (value)
@@ -126,7 +152,7 @@ public class UiMainMenu : MonoBehaviour
         }
         textSpeedPlayer1.text = GameManager.Instance.player1Speed.ToString();
     }
-
+    // Speed Changed Player 2 Slider
     private void OnPlayer2SpeedChanged(float value)
     {
         switch (value)
@@ -143,6 +169,8 @@ public class UiMainMenu : MonoBehaviour
         }
         textSpeedPlayer2.text = GameManager.Instance.player2Speed.ToString();
     }
+
+    // Size change Player 1
     private void OnLargePlayer1Clicked()
     {
         GameManager.Instance.player1Sprite = player1Large;
@@ -157,7 +185,7 @@ public class UiMainMenu : MonoBehaviour
     {
         GameManager.Instance.player1Sprite = player1Small;
     }
-
+    // Size Change Player 2
     private void OnSmallPlayer2Clicked()
     {
         GameManager.Instance.player2Sprite = player2Small;
@@ -170,6 +198,33 @@ public class UiMainMenu : MonoBehaviour
     {
         GameManager.Instance.player2Sprite = player2Large;
     }
+    // Color change Player 1
+    private void OnNullColorClikedPlayer1 ()
+    {
+        throw new NotImplementedException();
+    }
+    private void OnRedColorClikedPlayer1 ()
+    {
+        throw new NotImplementedException();
+    }
+    private void OnBlueColorClikedPlayer1 ()
+    {
+        throw new NotImplementedException();
+    }
+    // Color change Player 2
+    private void OnNullColorClickedPlayer2()
+    {
+        throw new NotImplementedException();
+    }
+    private void OnRedColorClickedPlayer2()
+    {
+        throw new NotImplementedException();
+    }
+    private void OnBlueColorClickedPlayer2()
+    {
+        throw new NotImplementedException();
+    }
+   
     private void OnExitClicked()
     {
         UnityEditor.EditorApplication.isPlaying = false;

@@ -119,9 +119,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &312899956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3701807598728868493, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &381783323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3619516798690264989, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &390681929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 886641721906686477, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
   m_PrefabInstance: {fileID: 710777817}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -401,17 +423,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 866101345656490807, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 1872444831989218750, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872444831989218750, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1872444831989218750, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2359226901545924282, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: backPanel
@@ -419,35 +437,35 @@ PrefabInstance:
       objectReference: {fileID: 432058472}
     - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632685759356015760, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3813970104668154394, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3813970104668154394, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7253661583477495789, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8350619434342633455, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
       propertyPath: m_Pivot.x
@@ -588,6 +606,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 866101345656490807, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
   m_PrefabInstance: {fileID: 710777817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &732843149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6114431144819068276, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &751440432
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +740,17 @@ MonoBehaviour:
 --- !u!114 &797390463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8599199360311060434, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1187326842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8340972237103493596, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
   m_PrefabInstance: {fileID: 710777817}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1230,6 +1270,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667143373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2289237580212883937, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &1728688930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4382313655093811225, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1781664514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1334,12 @@ MonoBehaviour:
   btnSmallPlayer2: {fileID: 1306089645}
   btnMediumPlayer2: {fileID: 381783323}
   btnLargePlayer2: {fileID: 667115732}
+  btnNullColorPlayer1: {fileID: 312899956}
+  btnRedColorPlayer1: {fileID: 390681929}
+  btnBlueColorPlayer1: {fileID: 1667143373}
+  btnNullColorPlayer2: {fileID: 732843149}
+  btnRedColorPlayer2: {fileID: 1187326842}
+  btnBlueColorPlayer2: {fileID: 1728688930}
   mainMenuCanvas: {fileID: 432058472}
   settingsPanel: {fileID: 710777823}
   creditsPanel: {fileID: 646620877}
