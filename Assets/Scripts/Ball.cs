@@ -2,18 +2,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private Rigidbody2D ballRb;
+    [SerializeField] private float initialVelocity = 0.1f; // variable modificable en el editor
+    private Rigidbody2D ballRb; // aqui es una variable para mandar a llamar al rigid body que hay dentro de esto
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        ballRb = GetComponent<Rigidbody2D>();
-        Launch();
+        ballRb = GetComponent<Rigidbody2D>(); // apenas inicia traeme al componente
+        Launch(); // ejecuta launch apenas despierta
     }
     private void Launch()
     {
-        float xVelocity = Random.Range(0,2) == 0 ? 1 : -1;
+        float xVelocity = Random.Range(0,2) == 0 ? 1 : -1; // PREGUNTAR SOBRE ESTA LINEA // PREGUNTAR POR QUE NO VA EN EL UPDATE
         float yVelocity = Random.Range(0,2) == 0 ? 1 : -1;
-        ballRb.linearVelocity = new Vector2(xVelocity, yVelocity);
+        ballRb.linearVelocity = new Vector2(xVelocity, yVelocity) * initialVelocity;
     }
     // Update is called once per frame
     void Update()
