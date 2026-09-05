@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 // si hay algo gris no lo necesito
 using UnityEngine;
@@ -11,6 +12,9 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private Button btnSettings;
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
+    [SerializeField] private Button btnSmallPlayer1;
+    [SerializeField] private Button btnMediumPlayer1;
+    [SerializeField] private Button btnLargePlayer1;
 
     [Header("Panels")]
     [SerializeField] private GameObject mainMenuCanvas;
@@ -29,16 +33,25 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private TMP_Text textSpeedPlayer1;
     [SerializeField] private TMP_Text textSpeedPlayer2;
 
+    [Header("SpritesSize")]
+    [SerializeField] private Sprite player1Small;
+    [SerializeField] private Sprite player1Medium;
+    [SerializeField] private Sprite player1Large;
+
     private void Awake()
     {
         btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnContinueClicked
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+        btnSmallPlayer1.onClick.AddListener(OnSmallPlayer1Clicked);
+        btnMediumPlayer1.onClick.AddListener(OnMediumPlayer1Clicked);
+        btnLargePlayer1.onClick.AddListener(OnLargePlayer1Clicked);
 
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,6 +65,9 @@ public class UiMainMenu : MonoBehaviour
         btnSettings.onClick.RemoveListener(OnSettingsClicked);
         btnCredits.onClick.RemoveListener(OnCreditsClicked);
         btnExit.onClick.RemoveListener(OnExitClicked);
+        btnSmallPlayer1.onClick.RemoveAllListeners();
+        btnMediumPlayer1.onClick.RemoveAllListeners();
+        btnLargePlayer1.onClick.RemoveAllListeners();
 
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
@@ -91,6 +107,32 @@ public class UiMainMenu : MonoBehaviour
         //player2.moveSpeed = value;
         //textSpeedPlayer2.text = value.ToString("F1");
     }
+    private void OnLargePlayer1Clicked()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnMediumPlayer1Clicked()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnSmallPlayer1Clicked()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SelectSmall()
+    {
+        GameManager.Instance.player1Sprite = player1Small;
+    }
+
+    public void SelectMedium()
+    {
+        GameManager.Instance.player1Sprite = player1Medium;
+    }
+
+    
     private void OnExitClicked()
     {
         UnityEditor.EditorApplication.isPlaying = false;

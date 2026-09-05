@@ -27,6 +27,8 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private TMP_Text textSpeedPlayer1;
     [SerializeField] private TMP_Text textSpeedPlayer2;
 
+
+
     private bool isPause = false;
 
     private void Awake() // solo para add listener y get components porque esta es la inicializacion (todas las referencias)
@@ -107,4 +109,5 @@ public class pauseMenu : MonoBehaviour
         player1.moveSpeed = value;
         textSpeedPlayer1.text = value.ToString("F1");
     }
+
 }

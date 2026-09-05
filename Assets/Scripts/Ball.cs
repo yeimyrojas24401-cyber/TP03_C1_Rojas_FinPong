@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float initialVelocity = 0.1f; // variable modificable en el editor
-    //[SerializeField] private float velocityMultiplier = 1.1f;
+    [SerializeField] private float velocityMultiplier = 1.1f;
     private Rigidbody2D ballRb; // aqui es una variable para mandar a llamar al rigid body que hay dentro de esto
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -18,13 +18,13 @@ public class Ball : MonoBehaviour
         ballRb.linearVelocity = new Vector2(xVelocity, yVelocity) * initialVelocity;
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.CompareTag("Paddle"))
-    //    {
-    //        ballRb.linearVelocity *= velocityMultiplier;
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            ballRb.linearVelocity *= velocityMultiplier;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
