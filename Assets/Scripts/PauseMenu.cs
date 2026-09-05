@@ -41,12 +41,12 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private Slider sliderPlayer2Speed;
 
     [Header("Players")]
-    [SerializeField] private MovementPlayer1 player1;
-    [SerializeField] private MovementPlayer2 player2;
+    [SerializeField] private MovementPlayer player1;
+    [SerializeField] private MovementPlayer player2;
 
     [Header("Player Visuals")]
-    [SerializeField] private Player1 player1Visual;
-    [SerializeField] private Player2 player2Visual;
+    [SerializeField] private Player player1Visual;
+    [SerializeField] private Player player2Visual;
 
     [Header("SpeedPlayersTMP")]
     [SerializeField] private TMP_Text textSpeedPlayer1;
@@ -72,7 +72,7 @@ public class pauseMenu : MonoBehaviour
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
 
-        //Size Buttons Player1
+        //Size Buttons Player
         btnSmallPlayer1.onClick.AddListener(OnButtonSmallPlayer1Clicked);
         btnMediumPlayer1.onClick.AddListener(OnButtonMediumPlayer1Clicked);
         btnLargePlayer1.onClick.AddListener(OnButtonLargePlayer1Clicked);
@@ -148,8 +148,8 @@ public class pauseMenu : MonoBehaviour
 
     private void OnSettingsClicked()
     {
-        sliderPlayer1Speed.value = player1.moveSpeedPlayer1;
-        sliderPlayer2Speed.value = player2.moveSpeedPlayer2;
+        sliderPlayer1Speed.value = player1.moveSpeedPlayer;
+        sliderPlayer2Speed.value = player2.moveSpeedPlayer;
         settingsPanel.SetActive(true);
     }
 
@@ -177,7 +177,7 @@ public class pauseMenu : MonoBehaviour
                 GameManager.Instance.player2Speed = 2000;
                 break;
         }
-        player2.moveSpeedPlayer2 = GameManager.Instance.player2Speed;
+        player2.moveSpeedPlayer = GameManager.Instance.player2Speed;
         textSpeedPlayer2.text = GameManager.Instance.player2Speed.ToString();
     }
 
@@ -195,7 +195,7 @@ public class pauseMenu : MonoBehaviour
                 GameManager.Instance.player1Speed = 2000;
                 break;
         }
-        player1.moveSpeedPlayer1 = GameManager.Instance.player1Speed;
+        player1.moveSpeedPlayer = GameManager.Instance.player1Speed;
         textSpeedPlayer1.text = GameManager.Instance.player1Speed.ToString();
     }
     private void OnButtonSmallPlayer1Clicked()

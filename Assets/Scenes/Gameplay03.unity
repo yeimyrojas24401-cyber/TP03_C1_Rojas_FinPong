@@ -1050,10 +1050,10 @@ MonoBehaviour:
   pausePanel: {fileID: 634267368}
   sliderPlayer1Speed: {fileID: 132460935}
   sliderPlayer2Speed: {fileID: 714499649}
-  player1: {fileID: 1600476476}
+  player1: {fileID: 0}
   player2: {fileID: 2091655704}
   player1Visual: {fileID: 1600476482}
-  player2Visual: {fileID: 2091655703}
+  player2Visual: {fileID: 0}
   textSpeedPlayer1: {fileID: 738697091}
   textSpeedPlayer2: {fileID: 1286935897}
   player1Small: {fileID: -7607923960266738449, guid: c9043a16b1c34f44fbc26a6b84260ebf, type: 3}
@@ -1912,7 +1912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600476478}
   - component: {fileID: 1600476477}
-  - component: {fileID: 1600476476}
+  - component: {fileID: 1600476483}
   - component: {fileID: 1600476482}
   - component: {fileID: 1600476479}
   - component: {fileID: 1600476480}
@@ -1923,24 +1923,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1600476476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600476475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4898e7f9df6fe4e46998e6d4cf3fae22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Movement
-  moveUp: 119
-  moveRight: 100
-  moveDown: 115
-  moveLeft: 97
-  isContinuous: 1
-  moveSpeedPlayer1: 1
 --- !u!212 &1600476477
 SpriteRenderer:
   serializedVersion: 2
@@ -2100,6 +2082,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8cf6a2bca29bb469b8ffbc8da01361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player1
+--- !u!114 &1600476483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600476475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a348cd88856c0a64392fb6af360190f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer
+  moveUp: 119
+  moveRight: 100
+  moveDown: 115
+  moveLeft: 97
+  isContinuous: 1
+  moveSpeedPlayer: 1
+  playerIndex: 1
 --- !u!1 &1600924546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,9 +2321,9 @@ GameObject:
   - component: {fileID: 2091655699}
   - component: {fileID: 2091655698}
   - component: {fileID: 2091655704}
-  - component: {fileID: 2091655703}
-  - component: {fileID: 2091655700}
+  - component: {fileID: 2091655706}
   - component: {fileID: 2091655701}
+  - component: {fileID: 2091655705}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Paddle
@@ -2379,7 +2380,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3647831495681956669, guid: cb944f90b0f303a4582edced33053b45, type: 3}
+  m_Sprite: {fileID: 3706645226061654005, guid: 2fb8f13c4cf5e9d4fa8de0f47124d230, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2404,7 +2405,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2091655700
+--- !u!50 &2091655701
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091655696}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 5
+--- !u!114 &2091655704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091655696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a348cd88856c0a64392fb6af360190f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer2
+  moveUp: 273
+  moveRight: 273
+  moveDown: 274
+  moveLeft: 276
+  isContinuous: 1
+  moveSpeedPlayer: 1
+  playerIndex: 2
+--- !u!61 &2091655705
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2442,42 +2489,15 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 2.03}
+    oldSize: {x: 1.27, y: 2.57}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.35, y: 2.03}
+  m_Size: {x: 1.27, y: 2.57}
   m_EdgeRadius: 0
---- !u!50 &2091655701
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091655696}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 5
---- !u!114 &2091655703
+--- !u!114 &2091655706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2489,24 +2509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604550d941c84d3469aa04cf513a3724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player2
---- !u!114 &2091655704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091655696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a348cd88856c0a64392fb6af360190f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer2
-  moveUp: 273
-  moveRight: 275
-  moveDown: 274
-  moveLeft: 276
-  isContinuous: 1
-  moveSpeedPlayer2: 1
 --- !u!1 &2107739103
 GameObject:
   m_ObjectHideFlags: 0
