@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4810886531003798500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7488405778481248101, guid: 8787b669ae2b0ab4c96214ae3574ae52, type: 3}
+  m_Sprite: {fileID: -3560698593848636649, guid: 5d24e2d6456704645b44dc291a855298, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -114,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 60
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -150,11 +150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1580
+      value: -170
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 958
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -167,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 3073481114801962962, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537019256205069578, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9095715777156535222, guid: b674c263d3bbe2c4188e535acc4ed5f5, type: 3}
       propertyPath: m_Name
