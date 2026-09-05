@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf1ed1d11d5029b48bf7a74079794bd5
+guid: 794709c46949869499feb3c5f686c0e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2527019171997139423
-    second: speedLion_0
+      213: 5066309187061003172
+    second: field_bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: speedLion_0
+      name: field_bg_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 288
-        height: 245
+        y: 0
+        width: 320
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd1cd775c86c11320800000000000000
-      internalID: 2527019171997139423
+      spriteID: 4a3b119fc552f4640800000000000000
+      internalID: 5066309187061003172
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      speedLion_0: 2527019171997139423
+      field_bg_0: 5066309187061003172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

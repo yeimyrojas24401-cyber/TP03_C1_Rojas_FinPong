@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using TMPro;
 // si hay algo gris no lo necesito
 using UnityEngine;

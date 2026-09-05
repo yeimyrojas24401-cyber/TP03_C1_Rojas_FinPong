@@ -5,12 +5,23 @@ using UnityEngine.UI;
 
 public class pauseMenu : MonoBehaviour
 {
+    [Header("GeneralButtons")]
     [SerializeField] private Button btnContinue;
     [SerializeField] private Button btnSettings;
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
 
 
+    [Header("SizePlayersButtons")]
+    [SerializeField] private Button btnSmallPlayer1;
+    [SerializeField] private Button btnMediumPlayer1;
+    [SerializeField] private Button btnLargePlayer1;
+
+    [SerializeField] private Button btnSmallPlayer2;
+    [SerializeField] private Button btnMediumPlayer2;
+    [SerializeField] private Button btnLargePlayer2;
+
+    [Header("Panels")]
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject pausePanel;
@@ -20,27 +31,47 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private Slider sliderPlayer2Speed;
 
     [Header("Players")]
-    [SerializeField] private Movement player1;
-    [SerializeField] private Movement player2;
+    [SerializeField] private MovementPlayer1 player1;
+    [SerializeField] private MovementPlayer2 player2;
 
     [Header("SpeedPlayersTMP")]
     [SerializeField] private TMP_Text textSpeedPlayer1;
     [SerializeField] private TMP_Text textSpeedPlayer2;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite player1Small;
+    [SerializeField] private Sprite player1Medium;
+    [SerializeField] private Sprite player1Large;
+
+    [SerializeField] private Sprite player2Small;
+    [SerializeField] private Sprite player2Medium;
+    [SerializeField] private Sprite player2Large;
 
 
     private bool isPause = false;
 
     private void Awake() // solo para add listener y get components porque esta es la inicializacion (todas las referencias)
     {
+        //General Pause Buttons
         btnContinue.onClick.AddListener(OnContinueClicked); // "When click in btnPlay ejecuta OnContinueClicked
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
 
+        //Size Buttons Player1
+        btnSmallPlayer1.onClick.AddListener(OnButtonSmallPlayer1Clicked);
+        btnMediumPlayer1.onClick.AddListener(OnButtonMediumPlayer1Clicked);
+        btnLargePlayer1.onClick.AddListener(OnButtonLargePlayer1Clicked);
+
+        //Size Buttons Player2
+        btnSmallPlayer2.onClick.AddListener(OnButtonSmallPlayer2Clicked);
+        btnMediumPlayer2.onClick.AddListener(OnButtonMediumPlayer2Clicked);
+        btnLargePlayer2.onClick.AddListener(OnButtonLargePlayer2Clicked);
+
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
+
 
     private void Start()
     {
@@ -63,6 +94,14 @@ public class pauseMenu : MonoBehaviour
         btnCredits.onClick.RemoveAllListeners();
         btnExit.onClick.RemoveAllListeners();
 
+        btnSmallPlayer1.onClick.RemoveAllListeners();
+        btnMediumPlayer1.onClick.RemoveAllListeners();
+        btnLargePlayer1.onClick.RemoveAllListeners();
+
+        btnSmallPlayer2.onClick.RemoveAllListeners();
+        btnMediumPlayer2.onClick.RemoveAllListeners();
+        btnLargePlayer2.onClick.RemoveAllListeners();
+
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
     }
@@ -83,8 +122,8 @@ public class pauseMenu : MonoBehaviour
 
     private void OnSettingsClicked()
     {
-        sliderPlayer1Speed.value = player1.moveSpeed;
-        sliderPlayer2Speed.value = player2.moveSpeed;
+        sliderPlayer1Speed.value = player1.moveSpeedPlayer1;
+        sliderPlayer2Speed.value = player2.moveSpeedPlayer2;
         settingsPanel.SetActive(true);
     }
 
@@ -100,14 +139,62 @@ public class pauseMenu : MonoBehaviour
 
     private void OnPlayer2SpeedChanged(float value)
     {
-        player2.moveSpeed = value;
-        textSpeedPlayer2.text = value.ToString("F1");
+        switch (value)
+        {
+            case 1:
+                GameManager.Instance.player2Speed = 500;
+                break;
+            case 2:
+                GameManager.Instance.player2Speed = 1000;
+                break;
+            case 3:
+                GameManager.Instance.player2Speed = 2000;
+                break;
+        }
+        player2.moveSpeedPlayer2 = GameManager.Instance.player2Speed;
+        textSpeedPlayer1.text = GameManager.Instance.player2Speed.ToString();
     }
 
     private void OnPlayer1SpeedChanged(float value)
     {
-        player1.moveSpeed = value;
-        textSpeedPlayer1.text = value.ToString("F1");
+        switch(value)
+        {
+            case 1:
+                GameManager.Instance.player1Speed = 500;
+                break;
+            case 2:
+                GameManager.Instance.player1Speed = 1000;
+                break;
+            case 3:
+                GameManager.Instance.player1Speed = 2000;
+                break;
+        }
+        player1.moveSpeedPlayer1 = GameManager.Instance.player1Speed;
+        textSpeedPlayer1.text = GameManager.Instance.player1Speed.ToString();
+    }
+    private void OnButtonSmallPlayer1Clicked()
+    {
+        GameManager.Instance.player1Sprite = player1Small;
+    }
+    private void OnButtonMediumPlayer1Clicked()
+    {
+        GameManager.Instance.player1Sprite = player1Medium;
+    }
+    private void OnButtonLargePlayer1Clicked()
+    {
+        GameManager.Instance.player1Sprite = player1Large;
+    }
+    private void OnButtonSmallPlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Small;
+    }
+    private void OnButtonMediumPlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Medium;
+    }
+    private void OnButtonLargePlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Large;
     }
 
 }
