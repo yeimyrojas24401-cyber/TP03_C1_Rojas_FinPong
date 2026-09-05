@@ -1050,10 +1050,10 @@ MonoBehaviour:
   pausePanel: {fileID: 634267368}
   sliderPlayer1Speed: {fileID: 132460935}
   sliderPlayer2Speed: {fileID: 714499649}
-  player1: {fileID: 0}
+  player1: {fileID: 1600476483}
   player2: {fileID: 2091655704}
   player1Visual: {fileID: 1600476482}
-  player2Visual: {fileID: 0}
+  player2Visual: {fileID: 2091655706}
   textSpeedPlayer1: {fileID: 738697091}
   textSpeedPlayer2: {fileID: 1286935897}
   player1Small: {fileID: -7607923960266738449, guid: c9043a16b1c34f44fbc26a6b84260ebf, type: 3}
@@ -2082,6 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8cf6a2bca29bb469b8ffbc8da01361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player1
+  playerIndex: 1
 --- !u!114 &1600476483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,7 +2100,7 @@ MonoBehaviour:
   moveDown: 115
   moveLeft: 97
   isContinuous: 1
-  moveSpeedPlayer: 1
+  moveSpeedPlayer: 1000
   playerIndex: 1
 --- !u!1 &1600924546
 GameObject:
@@ -2449,7 +2450,7 @@ MonoBehaviour:
   moveDown: 274
   moveLeft: 276
   isContinuous: 1
-  moveSpeedPlayer: 1
+  moveSpeedPlayer: 1000
   playerIndex: 2
 --- !u!61 &2091655705
 BoxCollider2D:
@@ -2506,9 +2507,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091655696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604550d941c84d3469aa04cf513a3724, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b8cf6a2bca29bb469b8ffbc8da01361, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player2
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerIndex: 2
 --- !u!1 &2107739103
 GameObject:
   m_ObjectHideFlags: 0
