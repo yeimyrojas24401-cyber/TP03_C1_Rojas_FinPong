@@ -1,9 +1,10 @@
 using TMPro;
 // si hay algo gris no lo necesito
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class mainMenu : MonoBehaviour
+public class UiMainMenu : MonoBehaviour
 {
     [Header("Buttons")]
     [SerializeField] private Button btnPlay;
@@ -20,9 +21,9 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private Slider sliderPlayer1Speed;
     [SerializeField] private Slider sliderPlayer2Speed;
 
-    [Header("Players")]
-    [SerializeField] private Movement player1;
-    [SerializeField] private Movement player2;
+    //[Header("Players")]
+    //[SerializeField] private Movement player1;
+    //[SerializeField] private Movement player2;
 
     [Header("SpeedPlayersTMP")]
     [SerializeField] private TMP_Text textSpeedPlayer1;
@@ -59,12 +60,13 @@ public class mainMenu : MonoBehaviour
     private void OnPlayClicked() // this is the function called OnContinueClicked which is going to run when the btnPlay click
     {
         mainMenuCanvas.SetActive(false); //  When Play is clicked, this GameObject becomes inactive.
+        SceneManager.LoadScene("Gameplay03");
     }
 
     private void OnSettingsClicked()
     {
-        sliderPlayer1Speed.value = player1.moveSpeed;
-        sliderPlayer2Speed.value = player2.moveSpeed;
+        //sliderPlayer1Speed.value = player1.moveSpeed;
+        //sliderPlayer2Speed.value = player2.moveSpeed;
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(true);
         creditsPanel.SetActive(false);
@@ -79,15 +81,15 @@ public class mainMenu : MonoBehaviour
 
     private void OnPlayer1SpeedChanged(float value) // esta funcion va a recibir un numero decimal cuando sea llamada
     {
-        player1.moveSpeed = value;
-        // float percentage = value * 25f; //esto nos permite hacer una equivalencia para que la velocidad se ponga en %
-        textSpeedPlayer1.text = value.ToString("F1");
+        //player1.moveSpeed = value;
+        //// float percentage = value * 25f; //esto nos permite hacer una equivalencia para que la velocidad se ponga en %
+        //textSpeedPlayer1.text = value.ToString("F1");
     }
 
     private void OnPlayer2SpeedChanged(float value)
     {
-        player2.moveSpeed = value;
-        textSpeedPlayer2.text = value.ToString("F1");
+        //player2.moveSpeed = value;
+        //textSpeedPlayer2.text = value.ToString("F1");
     }
     private void OnExitClicked()
     {
