@@ -10,6 +10,11 @@ public class Player2 : MonoBehaviour
     }
     private void Start()
     {
+        UpdateSprite(); //esto nos permitira que el GameManagerInstance se pueda seguir updateando
+    }
+    public void UpdateSprite()
+    {
         spriteRenderer.sprite = GameManager.Instance.player2Sprite;
     }
+
 }

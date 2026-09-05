@@ -34,6 +34,10 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private MovementPlayer1 player1;
     [SerializeField] private MovementPlayer2 player2;
 
+    [Header("Player Visuals")]
+    [SerializeField] private Player1 player1Visual;
+    [SerializeField] private Player2 player2Visual;
+
     [Header("SpeedPlayersTMP")]
     [SerializeField] private TMP_Text textSpeedPlayer1;
     [SerializeField] private TMP_Text textSpeedPlayer2;
@@ -175,26 +179,32 @@ public class pauseMenu : MonoBehaviour
     private void OnButtonSmallPlayer1Clicked()
     {
         GameManager.Instance.player1Sprite = player1Small;
+        player1Visual.UpdateSprite();
     }
     private void OnButtonMediumPlayer1Clicked()
     {
         GameManager.Instance.player1Sprite = player1Medium;
+        player1Visual.UpdateSprite();
     }
     private void OnButtonLargePlayer1Clicked()
     {
         GameManager.Instance.player1Sprite = player1Large;
+        player1Visual.UpdateSprite();
     }
     private void OnButtonSmallPlayer2Clicked()
     {
         GameManager.Instance.player2Sprite = player2Small;
+        player2Visual.UpdateSprite();
     }
     private void OnButtonMediumPlayer2Clicked()
     {
         GameManager.Instance.player2Sprite = player2Medium;
+        player2Visual.UpdateSprite();
     }
     private void OnButtonLargePlayer2Clicked()
     {
         GameManager.Instance.player2Sprite = player2Large;
+        player2Visual.UpdateSprite();
     }
 
 }

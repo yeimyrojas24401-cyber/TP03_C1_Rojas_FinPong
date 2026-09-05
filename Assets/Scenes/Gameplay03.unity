@@ -1044,6 +1044,8 @@ MonoBehaviour:
   sliderPlayer2Speed: {fileID: 714499649}
   player1: {fileID: 1600476476}
   player2: {fileID: 2091655704}
+  player1Visual: {fileID: 1600476482}
+  player2Visual: {fileID: 2091655703}
   textSpeedPlayer1: {fileID: 738697091}
   textSpeedPlayer2: {fileID: 1286935897}
   player1Small: {fileID: -7607923960266738449, guid: c9043a16b1c34f44fbc26a6b84260ebf, type: 3}
@@ -1834,7 +1836,7 @@ GameObject:
   - component: {fileID: 1600476479}
   - component: {fileID: 1600476480}
   m_Layer: 0
-  m_Name: Player1Small
+  m_Name: Player1
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2255,7 +2257,7 @@ GameObject:
   - component: {fileID: 2091655700}
   - component: {fileID: 2091655701}
   m_Layer: 0
-  m_Name: Player2Small
+  m_Name: Player2
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
