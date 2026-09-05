@@ -198,6 +198,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &442916654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3561991704444865700, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &492544406 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 363354201959009384, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &646620876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -616,6 +638,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &797390463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8599199360311060434, guid: c5722f955ed432441a045d6c09994ed2, type: 3}
+  m_PrefabInstance: {fileID: 710777817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1188225332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1182,9 @@ MonoBehaviour:
   btnSettings: {fileID: 1457153716}
   btnCredits: {fileID: 751440436}
   btnExit: {fileID: 1594188766}
+  btnSmallPlayer1: {fileID: 442916654}
+  btnMediumPlayer1: {fileID: 797390463}
+  btnLargePlayer1: {fileID: 492544406}
   mainMenuCanvas: {fileID: 432058472}
   settingsPanel: {fileID: 710777823}
   creditsPanel: {fileID: 646620877}
@@ -1156,6 +1192,9 @@ MonoBehaviour:
   sliderPlayer2Speed: {fileID: 710777821}
   textSpeedPlayer1: {fileID: 710777820}
   textSpeedPlayer2: {fileID: 710777818}
+  player1Small: {fileID: -7607923960266738449, guid: c9043a16b1c34f44fbc26a6b84260ebf, type: 3}
+  player1Medium: {fileID: 4273535951287991463, guid: c397e4f13042d6b4e87932a0e104dbaa, type: 3}
+  player1Large: {fileID: -1255965977449420377, guid: c04459fed264e91458319f6b8b462708, type: 3}
 --- !u!114 &1781664516
 MonoBehaviour:
   m_ObjectHideFlags: 0
