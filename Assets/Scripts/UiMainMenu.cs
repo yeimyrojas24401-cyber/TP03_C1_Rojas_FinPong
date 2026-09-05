@@ -13,9 +13,14 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private Button btnSettings;
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
+
+    [Header("SizePlayersButtons")]
     [SerializeField] private Button btnSmallPlayer1;
     [SerializeField] private Button btnMediumPlayer1;
     [SerializeField] private Button btnLargePlayer1;
+    [SerializeField] private Button btnSmallPlayer2;
+    [SerializeField] private Button btnMediumPlayer2;
+    [SerializeField] private Button btnLargePlayer2;
 
     [Header("Panels")]
     [SerializeField] private GameObject mainMenuCanvas;
@@ -35,15 +40,27 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private Sprite player1Medium;
     [SerializeField] private Sprite player1Large;
 
+    [SerializeField] private Sprite player2Small;
+    [SerializeField] private Sprite player2Medium;
+    [SerializeField] private Sprite player2Large;
+
     private void Awake()
     {
         btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnContinueClicked
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         btnExit.onClick.AddListener(OnExitClicked);
+        
+        //Buttons player 1
         btnSmallPlayer1.onClick.AddListener(OnSmallPlayer1Clicked);
         btnMediumPlayer1.onClick.AddListener(OnMediumPlayer1Clicked);
         btnLargePlayer1.onClick.AddListener(OnLargePlayer1Clicked);
+
+        //Buttons player 2
+        btnSmallPlayer2.onClick.AddListener(OnSmallPlayer2Clicked);
+        btnMediumPlayer2.onClick.AddListener(OnMediumPlayer2Clicked);
+        btnLargePlayer2.onClick.AddListener(OnLargePlayer2Clicked);
+
 
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
@@ -62,9 +79,14 @@ public class UiMainMenu : MonoBehaviour
         btnSettings.onClick.RemoveListener(OnSettingsClicked);
         btnCredits.onClick.RemoveListener(OnCreditsClicked);
         btnExit.onClick.RemoveListener(OnExitClicked);
+        
         btnSmallPlayer1.onClick.RemoveAllListeners();
         btnMediumPlayer1.onClick.RemoveAllListeners();
         btnLargePlayer1.onClick.RemoveAllListeners();
+
+        btnSmallPlayer2.onClick.RemoveAllListeners();
+        btnMediumPlayer2.onClick.RemoveAllListeners();
+        btnLargePlayer2.onClick.RemoveAllListeners();
 
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
@@ -136,6 +158,19 @@ public class UiMainMenu : MonoBehaviour
     private void OnSmallPlayer1Clicked()
     {
         GameManager.Instance.player1Sprite = player1Small;
+    }
+
+    private void OnSmallPlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Small;
+    }
+    private void OnMediumPlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Medium;
+    }
+    private void OnLargePlayer2Clicked()
+    {
+        GameManager.Instance.player2Sprite = player2Large;
     }
     private void OnExitClicked()
     {

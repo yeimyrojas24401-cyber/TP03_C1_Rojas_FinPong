@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public float player2Speed = 1000f;
 
     public Sprite player1Sprite;
+    public Sprite player2Sprite;
 
     private void Awake()
     {

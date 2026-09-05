@@ -1,13 +1,11 @@
 using UnityEngine;
 
-public class player1 : MonoBehaviour
+public class Player1 : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private void Awake()
     {
-        spriteRenderer = GetComponent <SpriteRenderer>();
-        Debug.Log("SpriteRender: " + spriteRenderer);
-        Debug.Log("GameManager Instance: " + GameManager.Instance);
+        spriteRenderer = GetComponent <SpriteRenderer>(); // Apenas despiertes traeme a mi sprite renderer
     }
     private void Start()
     {
