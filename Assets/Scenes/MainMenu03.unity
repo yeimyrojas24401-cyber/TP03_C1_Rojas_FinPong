@@ -1255,6 +1255,8 @@ MonoBehaviour:
   player2Speed: 1000
   player1Sprite: {fileID: -7607923960266738449, guid: c9043a16b1c34f44fbc26a6b84260ebf, type: 3}
   player2Sprite: {fileID: 3647831495681956669, guid: cb944f90b0f303a4582edced33053b45, type: 3}
+  player1Color: {r: 1, g: 1, b: 1, a: 1}
+  player2Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1602150279
 Transform:
   m_ObjectHideFlags: 0

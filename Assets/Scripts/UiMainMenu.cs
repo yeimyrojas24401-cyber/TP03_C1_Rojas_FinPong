@@ -52,6 +52,9 @@ public class UiMainMenu : MonoBehaviour
     [SerializeField] private Sprite player2Medium;
     [SerializeField] private Sprite player2Large;
 
+    //[Header("Color Player Selector")]
+
+
     private void Awake()
     {
         btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnContinueClicked
@@ -84,12 +87,6 @@ public class UiMainMenu : MonoBehaviour
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
 
-
-
-
-
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -111,6 +108,14 @@ public class UiMainMenu : MonoBehaviour
         btnSmallPlayer2.onClick.RemoveAllListeners();
         btnMediumPlayer2.onClick.RemoveAllListeners();
         btnLargePlayer2.onClick.RemoveAllListeners();
+
+        btnNullColorPlayer1.onClick.RemoveAllListeners();
+        btnRedColorPlayer1.onClick.RemoveAllListeners();
+        btnBlueColorPlayer1.onClick.RemoveAllListeners();
+
+        btnNullColorPlayer2.onClick.RemoveAllListeners();
+        btnRedColorPlayer2.onClick.RemoveAllListeners();
+        btnBlueColorPlayer2.onClick.RemoveAllListeners();
 
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
@@ -201,28 +206,28 @@ public class UiMainMenu : MonoBehaviour
     // Color change Player 1
     private void OnNullColorClikedPlayer1 ()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player1Color = Color.white;
     }
     private void OnRedColorClikedPlayer1 ()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player1Color = Color.red;
     }
     private void OnBlueColorClikedPlayer1 ()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player1Color= Color.blue;
     }
     // Color change Player 2
     private void OnNullColorClickedPlayer2()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player2Color = Color.white;
     }
     private void OnRedColorClickedPlayer2()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player2Color = Color.red;
     }
     private void OnBlueColorClickedPlayer2()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.player2Color = Color.blue;
     }
    
     private void OnExitClicked()

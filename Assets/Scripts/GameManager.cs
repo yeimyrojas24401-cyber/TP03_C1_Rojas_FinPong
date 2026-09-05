@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public Sprite player1Sprite;
     public Sprite player2Sprite;
 
+    public Color player1Color = Color.white;
+    public Color player2Color = Color.white;
+
     private void Awake()
     {
         if (Instance == null)
