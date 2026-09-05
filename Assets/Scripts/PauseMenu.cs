@@ -96,9 +96,6 @@ public class pauseMenu : MonoBehaviour
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
 
-
-
-
     private void Start()
     {
         creditsPanel.SetActive(false); // alt + flecha hacia abajo y arriba para mover lineas 
